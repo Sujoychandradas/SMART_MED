@@ -4,6 +4,10 @@ package TeamDebugger;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class User extends JFrame {
 
@@ -34,14 +38,92 @@ public class User extends JFrame {
 
         field1 = new JTextField("First Name *");
         field1.setBounds(50,100,200,40);
-        field1.setBorder(new LineBorder(new Color(15, 158, 234),3));
+        field1.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field1);
 
+        field1.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field1.setText("");
+                field1.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field1.setBorder(new LineBorder(new Color(206, 212, 218),2));
+
+            }
+        });
+
         field2 = new JTextField("Last Name *");
-        field2.setBounds(50,170,200,40);
-        field2.setBorder(new LineBorder(new Color(15, 158, 234),3));
+        field2.setBounds(50,180,200,40);
+        field2.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field2);
 
+        field2.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field2.setText("");
+                field2.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field2.setBorder(new LineBorder(new Color(206, 212, 218),2));
+
+            }
+        });
+
+        field3 = new JTextField("Password *");
+        field3.setBounds(50,260,200,40);
+        field3.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field3);
+
+        field3.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field3.setText("");
+                field3.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field3.setBorder(new LineBorder(new Color(206, 212, 218),2));
+
+            }
+        });
+
+        field4 = new JTextField("Confirm Password *");
+        field4.setBounds(50,340,200,40);
+        field4.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field4);
+//        field4.addMouseListener(new MouseAdapter() {
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                field4.setText("");
+//                field4.setBorder(new LineBorder(new Color(15, 158, 234),3));
+//            }
+//        });
+        field4.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field4.setText("");
+                field4.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field4.setBorder(new LineBorder(new Color(206, 212, 218),2));
+                if (field4.getText().equals(""))
+                {
+                    field4.setText("Confirm Password *");
+                }
+                else
+                {
+                    field4.getText();
+                }
+            }
+        });
         setVisible(true);
     }
 }
