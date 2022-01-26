@@ -14,6 +14,7 @@ public class User extends JFrame {
     JButton login,regi,doc,user;
     JPanel panel1,panel2,panel3;
     JTextField field1,field2,field3,field4,field5,field6,field7,field8;
+    JLabel label1,label2;
     public User()
     {
         setSize(900,710);
@@ -40,6 +41,11 @@ public class User extends JFrame {
         field1.setBounds(50,100,200,40);
         field1.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field1);
+
+//        Font font1 = new Font()
+        label1 = new JLabel("Apply As a Doctor");
+        label1.setBounds(100,50,400,30);
+        panel2.add(label1);
 
         field1.addFocusListener(new FocusListener() {
             @Override
@@ -145,7 +151,7 @@ public class User extends JFrame {
 
 
         field5 = new JTextField("Your Email *");
-        field5.setBounds(150,100,200,40);
+        field5.setBounds(330,100,200,40);
         field5.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field5);
 
@@ -171,7 +177,7 @@ public class User extends JFrame {
         });
 
         field6 = new JTextField("Your Phone *");
-        field6.setBounds(50,180,200,40);
+        field6.setBounds(330,180,200,40);
         field6.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field6);
 
@@ -197,7 +203,7 @@ public class User extends JFrame {
         });
 
         field7 = new JTextField("Please Select Your Security Question *");
-        field7.setBounds(50,260,200,40);
+        field7.setBounds(330,260,200,40);
         field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field7);
 
@@ -223,7 +229,7 @@ public class User extends JFrame {
         });
 
         field8 = new JTextField("Enter Your Answer *");
-        field8.setBounds(50,340,200,40);
+        field8.setBounds(330,340,200,40);
         field8.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field8);
 
