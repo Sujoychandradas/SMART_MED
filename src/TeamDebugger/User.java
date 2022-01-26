@@ -13,7 +13,7 @@ public class User extends JFrame {
 
     JButton login,regi,doc,user;
     JPanel panel1,panel2,panel3;
-    JTextField field1,field2,field3,field4,field5;
+    JTextField field1,field2,field3,field4,field5,field6,field7,field8;
     public User()
     {
         setSize(900,710);
@@ -31,7 +31,7 @@ public class User extends JFrame {
 
 
         panel2 = new JPanel();
-        panel2.setBounds(250,100,650,500);
+        panel2.setBounds(250,100,600,500);
         panel2.setBackground(new Color(255, 255, 255));
         panel2.setLayout(null);
         panel1.add(panel2);
@@ -51,7 +51,14 @@ public class User extends JFrame {
             @Override
             public void focusLost(FocusEvent e) {
                 field1.setBorder(new LineBorder(new Color(206, 212, 218),2));
-
+                if (field1.getText().equals(""))
+                {
+                    field1.setText("First Name *");
+                }
+                else
+                {
+                    field1.getText();
+                }
             }
         });
 
@@ -70,7 +77,14 @@ public class User extends JFrame {
             @Override
             public void focusLost(FocusEvent e) {
                 field2.setBorder(new LineBorder(new Color(206, 212, 218),2));
-
+                if (field2.getText().equals(""))
+                {
+                    field2.setText("Last Name *");
+                }
+                else
+                {
+                    field2.getText();
+                }
             }
         });
 
@@ -89,7 +103,14 @@ public class User extends JFrame {
             @Override
             public void focusLost(FocusEvent e) {
                 field3.setBorder(new LineBorder(new Color(206, 212, 218),2));
-
+                if (field3.getText().equals(""))
+                {
+                    field3.setText("Password *");
+                }
+                else
+                {
+                    field3.getText();
+                }
             }
         });
 
@@ -97,13 +118,7 @@ public class User extends JFrame {
         field4.setBounds(50,340,200,40);
         field4.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field4);
-//        field4.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseClicked(MouseEvent e) {
-//                field4.setText("");
-//                field4.setBorder(new LineBorder(new Color(15, 158, 234),3));
-//            }
-//        });
+
         field4.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -121,6 +136,114 @@ public class User extends JFrame {
                 else
                 {
                     field4.getText();
+                }
+            }
+        });
+
+
+
+
+
+        field5 = new JTextField("Your Email *");
+        field5.setBounds(150,100,200,40);
+        field5.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field5);
+
+        field5.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field5.setText("");
+                field5.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field5.setBorder(new LineBorder(new Color(206, 212, 218),2));
+                if (field5.getText().equals(""))
+                {
+                    field5.setText("Your Email ");
+                }
+                else
+                {
+                    field5.getText();
+                }
+            }
+        });
+
+        field6 = new JTextField("Your Phone *");
+        field6.setBounds(50,180,200,40);
+        field6.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field6);
+
+        field6.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field6.setText("");
+                field6.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field6.setBorder(new LineBorder(new Color(206, 212, 218),2));
+                if (field6.getText().equals(""))
+                {
+                    field6.setText("Your Phone *");
+                }
+                else
+                {
+                    field6.getText();
+                }
+            }
+        });
+
+        field7 = new JTextField("Please Select Your Security Question *");
+        field7.setBounds(50,260,200,40);
+        field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field7);
+
+        field7.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field7.setText("");
+                field7.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
+                if (field7.getText().equals(""))
+                {
+                    field7.setText("Please Select Your Security Question *");
+                }
+                else
+                {
+                    field7.getText();
+                }
+            }
+        });
+
+        field8 = new JTextField("Enter Your Answer *");
+        field8.setBounds(50,340,200,40);
+        field8.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        panel2.add(field8);
+
+        field8.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                field8.setText("");
+                field8.setBorder(new LineBorder(new Color(15, 158, 234),3));
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                field8.setBorder(new LineBorder(new Color(206, 212, 218),2));
+                if (field8.getText().equals(""))
+                {
+                    field8.setText("Enter Your Answer *");
+                }
+                else
+                {
+                    field8.getText();
                 }
             }
         });
