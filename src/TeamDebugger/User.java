@@ -14,6 +14,9 @@ public class User extends JFrame {
     JButton login,regi,doc,user;
     JPanel panel1,panel2,panel3;
     JTextField field1,field2,field3,field4,field5,field6,field7,field8;
+    JComboBox box1;
+
+    JRadioButton button1, button2;
     JLabel label1,label2;
     public User()
     {
@@ -44,7 +47,8 @@ public class User extends JFrame {
 
 //        Font font1 = new Font()
         label1 = new JLabel("Apply As a Doctor");
-        label1.setBounds(100,50,400,30);
+        label1.setBounds(100,20,400,30);
+        label1.setHorizontalAlignment(JLabel.CENTER);
         panel2.add(label1);
 
         field1.addFocusListener(new FocusListener() {
@@ -202,33 +206,56 @@ public class User extends JFrame {
             }
         });
 
-        field7 = new JTextField("Please Select Your Security Question *");
-        field7.setBounds(330,260,200,40);
-        field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
-        panel2.add(field7);
+//        field7 = new JTextField("Please Select Your Security Question *");
+//        field7.setBounds(330,260,200,40);
+//        field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
+//        panel2.add(field7);
+//
+//        field7.addFocusListener(new FocusListener() {
+//            @Override
+//            public void focusGained(FocusEvent e) {
+//                field7.setText("");
+//                field7.setBorder(new LineBorder(new Color(15, 158, 234),3));
+//            }
+//
+//            @Override
+//            public void focusLost(FocusEvent e) {
+//                field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
+//                if (field7.getText().equals(""))
+//                {
+//                    field7.setText("Please Select Your Security Question *");
+//                }
+//                else
+//                {
+//                    field7.getText();
+//                }
+//            }
+//        });
 
-        field7.addFocusListener(new FocusListener() {
+        String type[] = {"Medicine","Cardiologists","Gastroenterologists","Psychiatrists","Neurologists","Dermatologists"};
+        box1 = new JComboBox(type);
+        box1.setRenderer(new MyComboBoxRenderer("Specialist"));
+        box1.setSelectedIndex(-1);
+
+        box1.setBorder(new LineBorder(new Color(206, 212, 218),2));
+        box1.setBounds(330,260,200,40);
+        box1.setBackground(Color.WHITE);
+        panel2.add(box1);
+
+        box1.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
-                field7.setText("");
-                field7.setBorder(new LineBorder(new Color(15, 158, 234),3));
+
+                box1.setBorder(new LineBorder(new Color(15, 158, 234),3));
             }
 
             @Override
             public void focusLost(FocusEvent e) {
-                field7.setBorder(new LineBorder(new Color(206, 212, 218),2));
-                if (field7.getText().equals(""))
-                {
-                    field7.setText("Please Select Your Security Question *");
-                }
-                else
-                {
-                    field7.getText();
-                }
+                box1.setBorder(new LineBorder(new Color(206, 212, 218),2));
             }
         });
 
-        field8 = new JTextField("Enter Your Answer *");
+        field8 = new JTextField("Age *");
         field8.setBounds(330,340,200,40);
         field8.setBorder(new LineBorder(new Color(206, 212, 218),2));
         panel2.add(field8);
@@ -245,7 +272,7 @@ public class User extends JFrame {
                 field8.setBorder(new LineBorder(new Color(206, 212, 218),2));
                 if (field8.getText().equals(""))
                 {
-                    field8.setText("Enter Your Answer *");
+                    field8.setText("Age *");
                 }
                 else
                 {
@@ -253,6 +280,29 @@ public class User extends JFrame {
                 }
             }
         });
+
+
+
+
+
         setVisible(true);
+    }
+
+
+    class MyComboBoxRenderer extends JLabel implements ListCellRenderer {
+        private String _title;
+
+        public MyComboBoxRenderer(String title) {
+            _title = title;
+        }
+
+        @Override
+        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean hasFocus) {
+            if (index == -1 && value == null)
+                setText(_title);
+            else
+                setText(value.toString());
+            return this;
+        }
     }
 }
