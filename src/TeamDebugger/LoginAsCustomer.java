@@ -1,4 +1,5 @@
 package TeamDebugger;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -7,15 +8,17 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class LoginAdmin extends JFrame {
+public class LoginAsCustomer extends JFrame {
 
     JButton login,admin,doc,user;
     JPanel panel1,panel2,panel3;
     JTextField field1;
+    JComboBox box1;
     JPasswordField field2;
 
+    JRadioButton button1, button2;
     JLabel label1,label2,label3,label4,label5,label6;
-    public LoginAdmin()
+    public LoginAsCustomer()
     {
         setSize(900,710);
         setLocationRelativeTo(null);
@@ -67,13 +70,15 @@ public class LoginAdmin extends JFrame {
         panel3.add(doc);
 
 
+
+
         //Font Section
-        Font font1 = new Font("Mono",3,20);
+        Font font1 = new Font("Mono",3,25);
         Font font2 = new Font("Mono",1,15);
         Font font3 = new Font("Times new Roman",1, 15);
 
 
-        label1 = new JLabel("Login As a Admin");
+        label1 = new JLabel("Login As a Customer");
         label1.setBounds(100,90,400,30);
         label1.setFont(font1);
         label1.setHorizontalAlignment(JLabel.CENTER);
@@ -151,7 +156,32 @@ public class LoginAdmin extends JFrame {
         login.setFont(font3);
         panel2.add(login);
 
-       setVisible(true);
+
+        label3 = new JLabel("<html><pre>If you're a Admin </pre></html>");
+        label3.setBounds(200,450,180,20);
+        label3.setFont(font3);
+        panel2.add(label3);
+
+        admin = new JButton("<html><u>Click Here.</u></html>");
+        admin.setBounds(360,450,80,20);
+        admin.setBackground(Color.WHITE);
+        admin.setFont(font3);
+        admin.setBorder(null);
+        admin.setFocusable(false);
+        panel2.add(admin);
+
+        admin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                admin.setForeground(Color.red);
+                dispose();
+                new LoginAdmin();
+            }
+        });
+
+        setVisible(true);
     }
 }
+
+
 
