@@ -375,6 +375,14 @@ public class Doctor extends JFrame {
         login.setBackground(Color.WHITE);
         panel1.add(login);
 
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new LoginAsDoctor();
+            }
+        });
+
         regi = new JButton("Apply");
         regi.setBounds(430,420,100,40);
         regi.setBackground(new Color(2, 98, 204));

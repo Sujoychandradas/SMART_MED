@@ -9,7 +9,7 @@ import java.io.File;
 
 public class LoginAdmin extends JFrame {
 
-    JButton login,admin,doc,user;
+    JButton login,regi,doc,user;
     JPanel panel1,panel2,panel3;
     JTextField field1;
     JPasswordField field2;
@@ -56,19 +56,29 @@ public class LoginAdmin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new User();
+                new LoginAsCustomer();
             }
         });
 
         doc = new JButton("Doctor");
         doc.setBounds(105,2,110,25);
         doc.setFocusable(false);
-        doc.setBackground(new Color(255, 255, 255));
+        doc.setBackground(new Color(15, 158, 234));
         panel3.add(doc);
 
 
+
+        doc.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new LoginAsDoctor();
+            }
+        });
+
+
         //Font Section
-        Font font1 = new Font("Mono",3,20);
+        Font font1 = new Font("Mono",3,25);
         Font font2 = new Font("Mono",1,15);
         Font font3 = new Font("Times new Roman",1, 15);
 
@@ -150,6 +160,10 @@ public class LoginAdmin extends JFrame {
         login.setFocusable(false);
         login.setFont(font3);
         panel2.add(login);
+
+
+
+
 
        setVisible(true);
     }

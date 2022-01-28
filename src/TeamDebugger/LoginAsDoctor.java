@@ -10,7 +10,7 @@ import java.io.File;
 
 public class LoginAsDoctor extends JFrame {
 
-    JButton login,admin,doc,user;
+    JButton login,admin,doc,user,regi;
     JPanel panel1,panel2,panel3;
     JTextField field1;
     JPasswordField field2;
@@ -57,7 +57,7 @@ public class LoginAsDoctor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new User();
+                new LoginAsCustomer();
             }
         });
 
@@ -70,8 +70,10 @@ public class LoginAsDoctor extends JFrame {
 
 
 
+
+
         //Font Section
-        Font font1 = new Font("Mono",3,20);
+        Font font1 = new Font("Mono",3,25);
         Font font2 = new Font("Mono",1,15);
         Font font3 = new Font("Times new Roman",1, 15);
 
@@ -176,6 +178,20 @@ public class LoginAsDoctor extends JFrame {
             }
         });
 
+        regi = new JButton("Register");
+        regi.setBounds(70,520,100,40);
+        regi.setFont(font3);
+        regi.setFocusable(false);
+        regi.setBackground(Color.WHITE);
+        panel1.add(regi);
+
+        regi.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Doctor();
+            }
+        });
         setVisible(true);
     }
 }

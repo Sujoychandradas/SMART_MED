@@ -10,7 +10,7 @@ import java.io.File;
 
 public class LoginAsCustomer extends JFrame {
 
-    JButton login,admin,doc,user;
+    JButton login,admin,doc,user,regi;
     JPanel panel1,panel2,panel3;
     JTextField field1;
     JComboBox box1;
@@ -51,23 +51,25 @@ public class LoginAsCustomer extends JFrame {
         user = new JButton("Customer");
         user.setBounds(10,2,110,25);
         user.setFocusable(false);
-        user.setBackground(new Color(15, 158, 234));
+        user.setBackground(new Color(255, 255, 255));
 //        doc.setForeground(new Color(15, 158, 234));
         panel3.add(user);
 
-        user.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-                new User();
-            }
-        });
 
         doc = new JButton("Doctor");
         doc.setBounds(105,2,110,25);
         doc.setFocusable(false);
-        doc.setBackground(new Color(255, 255, 255));
+        doc.setBackground(new Color(15, 158, 234));
         panel3.add(doc);
+
+
+        doc.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new LoginAsDoctor();
+            }
+        });
 
 
 
@@ -170,6 +172,7 @@ public class LoginAsCustomer extends JFrame {
         admin.setFocusable(false);
         panel2.add(admin);
 
+
         admin.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -179,6 +182,20 @@ public class LoginAsCustomer extends JFrame {
             }
         });
 
+        regi = new JButton("Register");
+        regi.setBounds(70,520,100,40);
+        regi.setFont(font3);
+        regi.setFocusable(false);
+        regi.setBackground(Color.WHITE);
+        panel1.add(regi);
+
+        regi.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new User();
+            }
+        });
         setVisible(true);
     }
 }
