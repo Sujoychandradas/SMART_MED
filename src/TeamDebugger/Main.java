@@ -7,6 +7,7 @@ public class Main {
 //        new LoginAdmin();
 //        new LoginAsCustomer();
 //          new LoginAsDoctor();
+        new Menu();
     }
 
 }
