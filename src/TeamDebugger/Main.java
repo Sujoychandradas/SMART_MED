@@ -7,8 +7,12 @@ public class Main {
 //        new LoginAdmin();
 //        new LoginAsCustomer();
 //          new LoginAsDoctor();
-        new Menu();
+//        new Menu();
 //        new  GetAppointment();
+//          new DermatologistList();
+//        new GynecologistList();
+//        new NeurologistList();
+//        new PsychiatristList();
     }
 
 }

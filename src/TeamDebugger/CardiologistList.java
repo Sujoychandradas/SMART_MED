@@ -12,15 +12,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import static java.awt.FlowLayout.LEFT;
 
-public class Menu extends JFrame {
+public class CardiologistList extends JFrame {
 
     JButton login,regi,doc,user;
     JPanel panel1,panel2,panel3;
     JTextField field1;
     JPasswordField field2;
-//    Container cnt  = this.getContentPane();
+    //    Container cnt  = this.getContentPane();
     JTable table;
 
 
@@ -28,7 +27,7 @@ public class Menu extends JFrame {
     DefaultTableModel model = new DefaultTableModel();
 
     JLabel label1,label2,label3,label4,label5,label6;
-    public Menu()
+    public CardiologistList()
     {
         setSize(1000,500);
         setLocationRelativeTo(null);
@@ -92,7 +91,7 @@ public class Menu extends JFrame {
             while (rs.next())
             {
                 model.addRow(new Object[]{rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),
-                rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9)});
+                        rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9)});
             }
         }catch (Exception e)
         {
