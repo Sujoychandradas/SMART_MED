@@ -19,8 +19,8 @@ public class GetAppointment extends JFrame {
         setLocationRelativeTo(null);
 
         Font f = new Font("Mono",3,30);
-        Font f1 = new Font("Mono",3,20);
-        Font f2 = new Font("Mono",3,15);
+        Font f1 = new Font("Mono",3,16);
+        Font f2 = new Font("Times new Roman",1, 20);
 
 
         panel1 = new JPanel();
@@ -37,7 +37,7 @@ public class GetAppointment extends JFrame {
         panel1.add(panel2);
 
         title = new JLabel("Get an Appointment");
-        title.setBounds(100,20,400,30);
+        title.setBounds(100,40,400,30);
         title.setFont(f);
         title.setHorizontalAlignment(JLabel.CENTER);
         title.setForeground(Color.black);
@@ -51,32 +51,32 @@ public class GetAppointment extends JFrame {
         panel2.add(title1);
 
         b1 = new JButton("Medicine ");
-        b1.setBounds(80,150,170,30);
-        b1.setFont(f1);
+        b1.setBounds(80,180,170,30);
+        b1.setFont(f2);
         b1.setFocusable(false);
         b1.setBackground(Color.blue);
         b1.setForeground(Color.WHITE);
         panel2.add(b1);
 
         b2 = new JButton("Cardiologist ");
-        b2.setBounds(350,150,170,30);
-        b2.setFont(f1);
+        b2.setBounds(350,180,170,30);
+        b2.setFont(f2);
         b2.setFocusable(false);
         b2.setBackground(Color.blue);
         b2.setForeground(Color.WHITE);
         panel2.add(b2);
 
         b3 = new JButton("Gynecologist ");
-        b3.setBounds(80,200,170,30);
-        b3.setFont(f1);
+        b3.setBounds(80,230,170,30);
+        b3.setFont(f2);
         b3.setFocusable(false);
         b3.setBackground(Color.BLUE);
         b3.setForeground(Color.WHITE);
         panel2.add(b3);
 
         b4 = new JButton("Neurologist ");
-        b4.setBounds(350,200,170,30);
-        b4.setFont(f1);
+        b4.setBounds(350,230,170,30);
+        b4.setFont(f2);
         b4.setFocusable(false);
         b4.setBackground(Color.BLUE);
         b4.setForeground(Color.WHITE);
@@ -84,43 +84,23 @@ public class GetAppointment extends JFrame {
 
 
         b5 = new JButton("Dermatologist");
-        b5.setBounds(80,250,170,30);
-        b5.setFont(f1);
+        b5.setBounds(80,280,170,30);
+        b5.setFont(f2);
         b5.setFocusable(false);
         b5.setBackground(Color.BLUE);
         b5.setForeground(Color.WHITE);
         panel2.add(b5);
 
 
-        b6 = new JButton("Physcitrist ");
-        b6.setBounds(350,250,170,30);
-        b6.setFont(f1);
+        b6 = new JButton("Psychiatrist");
+        b6.setBounds(350,280,170,30);
+        b6.setFont(f2);
         b6.setFocusable(false);
         b6.setBackground(Color.BLUE);
         b6.setForeground(Color.WHITE);
         panel2.add(b6);
 
 
-        l1 = new JLabel("   ** Is This Your First Visit ");
-        l1.setBounds(50,310,420,30);
-        l1.setFont(f1);
-        l1.setForeground(Color.DARK_GRAY);
-        panel2.add(l1);
-
-        btn1 = new JRadioButton("Yes");
-        btn1.setBounds(120,340,100,40);
-        btn1.setBackground(Color.WHITE);
-        btn1.setFont(f1);
-        btn1.setFocusable(false);
-        panel2.add(btn1);
-
-
-        btn2 = new JRadioButton("No");
-        btn2.setBounds(210,340,100,40);
-        btn2.setFont(f1);
-        btn2.setBackground(Color.WHITE);
-        btn2.setFocusable(false);
-        panel2.add(btn2);
 
 
         back = new JButton("back");
