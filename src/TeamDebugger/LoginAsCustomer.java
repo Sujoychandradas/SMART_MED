@@ -129,6 +129,14 @@ public class LoginAsCustomer extends JFrame {
             }
         });
 
+
+
+        label2 = new JLabel();
+        label2.setBounds(20, 180, 200, 300);
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon("/home/sujoy/Desktop/code/Smart-MED/Files/hi.jpeg").getImage().getScaledInstance(200, 300, Image.SCALE_DEFAULT));
+        label2.setIcon(imageIcon);
+        panel1.add(label2);
+
         field2 = new JPasswordField();
         field2.setBounds(250,280,250,40);
         field2.setFont(font2);
@@ -157,6 +165,21 @@ public class LoginAsCustomer extends JFrame {
         login.setFocusable(false);
         login.setFont(font3);
         panel2.add(login);
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String userName = field1.getText();
+                String pass = String.valueOf(field2.getPassword());
+
+                ConnectionProvider db = new ConnectionProvider();
+//                String queryLogin = "SELECT  `Username`, AND `Password` FROM `UserReg`";
+                String queryLogin ="Select * from UserReg Where Username='" + userName + "' and Password='" + pass + "'";
+                db.LoginCus ( queryLogin,  userName,  pass);
+                dispose();
+            }
+        });
 
 
         label3 = new JLabel("<html><pre>If you're a Admin </pre></html>");

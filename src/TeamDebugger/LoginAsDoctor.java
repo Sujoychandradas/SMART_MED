@@ -70,7 +70,11 @@ public class LoginAsDoctor extends JFrame {
 
 
 
-
+        label2 = new JLabel();
+        label2.setBounds(20, 180, 200, 300);
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon("/home/sujoy/Desktop/code/Smart-MED/Files/hello.png").getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT));
+        label2.setIcon(imageIcon);
+        panel1.add(label2);
 
         //Font Section
         Font font1 = new Font("Mono",3,25);
@@ -155,6 +159,21 @@ public class LoginAsDoctor extends JFrame {
         login.setFocusable(false);
         login.setFont(font3);
         panel2.add(login);
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String userName = field1.getText();
+                String pass = String.valueOf(field2.getPassword());
+
+                ConnectionProvider db = new ConnectionProvider();
+//                String queryLogin = "SELECT  `Username`, AND `Password` FROM `UserReg`";
+                String queryLogin ="Select * from `DoctorReg` Where Username='" + userName + "' and Password='" + pass + "'";
+                db.LoginDoc ( queryLogin,  userName,  pass);
+                dispose();
+            }
+        });
 
         label3 = new JLabel("<html><pre>If you're a Admin </pre></html>");
         label3.setBounds(200,450,180,20);

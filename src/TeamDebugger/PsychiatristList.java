@@ -73,6 +73,28 @@ public class PsychiatristList extends JFrame {
         Font font1 = new Font("Mono",3,25);
         Font font2 = new Font("Mono",1,15);
         Font font3 = new Font("Times new Roman",1, 15);
+        Font font4 = new Font("Mono",1,25);
+
+
+        JButton button = new JButton("Back");
+        button.setBounds(450,300,100,30);
+        button.setFocusable(false);
+        panel2.add(button);
+
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new DoctorList();
+            }
+        });
+
+        label1 = new JLabel("PSYCHIATRIST");
+        label1.setBounds(410,20,300,50);
+        label1.setVerticalAlignment(JLabel.CENTER);
+        label1.setFont(font4);
+        label1.setForeground(Color.WHITE);
+        panel1.add(label1);
 
         JTableHeader tableHeader = table.getTableHeader();
         tableHeader.setFont(font3);

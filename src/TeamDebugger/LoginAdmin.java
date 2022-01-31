@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.URI;
 
 public class LoginAdmin extends JFrame {
 
@@ -90,6 +91,13 @@ public class LoginAdmin extends JFrame {
         panel2.add(label1);
 
 
+        label2 = new JLabel();
+        label2.setBounds(20, 180, 200, 300);
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon("/home/sujoy/Desktop/code/Smart-MED/Files/Admin.jpeg").getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT));
+        label2.setIcon(imageIcon);
+        panel1.add(label2);
+
+
         label2 = new JLabel("User Name      :");
         label2.setBounds(100,180,200,40);
 //        label2.setBorder(new LineBorder(new Color(206, 212, 218),2));
@@ -160,6 +168,38 @@ public class LoginAdmin extends JFrame {
         login.setFocusable(false);
         login.setFont(font3);
         panel2.add(login);
+
+        login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String userName = field1.getText();
+                String pass = String.valueOf(field2.getPassword());
+
+                if (userName.equals("Sujoy") && pass.equals("1234")){
+                    JOptionPane.showMessageDialog(null,"Login Successful");
+                    dispose();
+                    try {
+                        final URI url = new URI("http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=Smart_MED");
+                        if(Desktop.isDesktopSupported()){
+                        Desktop desktop = Desktop.getDesktop();
+                        try{
+                            desktop.browse(url);
+
+                        }
+                        catch (Exception ex){
+                            System.out.println(ex);
+                        }
+                    }
+                    else{
+                        System.out.println("ERROR!");
+                    }
+                }catch (Exception ex){
+                    System.out.println(ex);
+                }
+            }
+
+            }
+        });
 
 
 
