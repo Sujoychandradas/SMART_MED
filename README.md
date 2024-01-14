@@ -1,4 +1,5 @@
 # SMART_MED
+### This project was created during the 5th semester as part of an Object-Oriented Programming (OOP) course. It represents a culmination of skills and knowledge gained during that academic term.
 
 ## Table of Contents
 
