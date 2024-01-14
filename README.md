@@ -3,16 +3,29 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Folder Structure](#folder-structure)
-4. [Setup and Installation](#setup-and-installation)
-5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
+2. [Samples](#samples)
+3. [Features](#features)
+4. [Folder Structure](#folder-structure)
+5. [Setup and Installation](#setup-and-installation)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Introduction<a name="introduction"></a>
 
 SMART_MED is a Java Swing-based project designed to provide accessible healthcare services to users. The project focuses on delivering features like remote doctor consultations, emergency ambulance booking, and medicine delivery at home. It is integrated with telemedicine platforms, local ambulance service providers, and pharmacies. The development process emphasizes data security and compliance with healthcare regulations.
+
+## Samples<a name="samples"></a>
+<img src="https://drive.google.com/uc?export=view&id=1hE34QO9Mxt3KrU36jSOcdTRgwI6_v7bH" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=1msPi86XTfFpXN9j6CC7VjoTb-csGlMIS" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=1w5Oimyc_cTFBENZ-G6MmYhqjTfwO2-TO" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=1eiMbKKs0qg3OLLRrsjIsandtDZW5Cqen" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=1wLKttngD0WYeMr6NTmz0HFbq1qe-rQuk" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=1BsoTN0ha10GJCuPf05ehSNWsS5at3VGS" alt="Your Image" width="300">
+<img src="https://drive.google.com/uc?export=view&id=12_m-GkOe-d2pCBptJr1kAOq1HdHcxUX6" alt="Your Image" width="300">
+
+
+
 
 ## Features<a name="features"></a>
 
@@ -20,7 +33,6 @@ SMART_MED is a Java Swing-based project designed to provide accessible healthcar
 - **Emergency Ambulance Booking:** Quick and efficient booking of emergency ambulance services.
 - **Medicine Delivery at Home:** Seamless delivery of medicines to the user's doorstep.
 - **Integration:** SMART_MED is integrated with telemedicine platforms, local ambulance service providers, and pharmacies.
-- **Data Security:** Stringent measures are implemented to ensure the security of user data.
 - **Regulatory Compliance:** The project complies with healthcare regulations to maintain ethical standards.
 
 ## Folder Structure<a name="folder-structure"></a>
